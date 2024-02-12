@@ -9,8 +9,7 @@ largest sorted-order distance betwen them. This function has O(n) runtime.
 This program can be run in any environment that can compile C code. 
 
 You can use the below command to compile the code in a PowerShell or Linux window with GCC.
-```gcc main.c lab3.c -Wall -Werror
-```
+```gcc main.c lab3.c -Wall -Werror```
 
 ## Usage
 
