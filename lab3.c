@@ -12,29 +12,22 @@ float findClusterExtreme(float array[], int n) {
 	float min = array[0];
 	float max = array[0];
 
-
 	//Initializing buckets
 	float * bucketArr = malloc(sizeof(float) * (n - 2));
 
 	for (int i = 0; i < (n - 2); i++) {
-
 		bucketArr[i] = 0.0;
-
 	}
 
 	
 	//Identifying min and max values in array
 	for (int i = 0; i < n; i++) {
-
+		
 		if(min > array[i]){
-
-			
 			min = array[i];
-
 		}
 		
 		if (max < array[i]) {
-
 			max = array[i];
 		}
 
@@ -48,28 +41,20 @@ float findClusterExtreme(float array[], int n) {
 
 	for (int i = 0; i < (n - 1); i++) {
 
-
 		if (array[i] == min || array[i] == max) {
-
 		//Do nothing. Min and Max values not put into new array.
-
 		}
 
 		else {
-
 			//Calculate index
 			ratio = (array[i] - min) / (max - min);
 			index = ratio * (n-2);
 		
-			
 			if (bucketArr[index] == 0.0) {
 				bucketArr[index] = array[i];
 			}
 
-
-
 		}
-
 
 	}
 
